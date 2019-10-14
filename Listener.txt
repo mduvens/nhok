@@ -1,0 +1,23 @@
+
+CL-USER 1 > defun numerador (racional) (car racional)
+NUMERADOR
+
+CL-USER 2 > defun denominador (racional) (cdr racional)
+DENOMINADOR
+
+CL-USER 3 > defun somaF (n1 n2) (/ (+ (* (numerador n1) (denominador n2)) (* (numerador n2) (denominador n1))) (* (denominador n2) (denominador n1)))
+SOMAF
+
+CL-USER 4 > setq n1 (cons 2 3)
+(2 . 3)
+
+CL-USER 5 > setq n2 (cons 3 4)
+(3 . 4)
+
+CL-USER 6 > somaF n1 n2
+17/12
+
+CL-USER 7 > somaF (cons 2 3) (cons 3 4)
+17/12
+
+CL-USER 8 > 
